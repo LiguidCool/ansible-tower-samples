@@ -1,5 +1,5 @@
 - name: Hello World Sample
   hosts: all
   tasks:
-    - name: Installs apache web server
+    - name: Installs Midnight Commander
       yum: pkg=mc
