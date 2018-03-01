@@ -1,13 +1,5 @@
 - name: Hello World Sample
   hosts: all
   tasks:
-    - name: Hello Message
-      debug:
-        msg: "Hello World!"
-    - name: Write to file Hello Message
-      copy:
-        msg: "Hello World - written"
-        contents: “Hello Ansible world!”
-        dest: /root/hello
-        perms: 0444
-        owner: root
+    - name: Installs apache web server
+      yum: pkg=mc
