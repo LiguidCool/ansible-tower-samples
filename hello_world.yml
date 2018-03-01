@@ -2,8 +2,11 @@
   hosts: all
   tasks:
     - name: Hello Message
+        debug:
+          msg: "Hello World!"
+    - name: Hello Message
       copy:
-        content: “Hello Ansible world!”
+        contents: “Hello Ansible world!”
         dest: /root/hello
         perms: 0444
         owner: root
