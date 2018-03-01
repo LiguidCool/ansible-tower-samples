@@ -6,7 +6,6 @@
     - name: Installs Envirement Packages
       yum: pkg={{ item }}
       with_items:
-        - epel-release
         - mc
         - htop
         - net-tools
