@@ -1,6 +1,11 @@
 - name: Hello World Sample
   hosts: all
   tasks:
+    - name: Extra Packages for Enterprise Linux 7
+      yum_repository:
+        name: Extra Packages for Enterprise Linux 7 - $basearch
+        description: EPEL YUM repo
+        baseurl: https://download.fedoraproject.org/pub/epel/$releasever/$basearch/
     - name: Installs Envirement Packages
       yum: pkg={{ item }}
       with_items:
