@@ -4,3 +4,9 @@
     - name: Hello Message
       debug:
         msg: "Hello World!"
+    - name: Write to file Hello Message
+      copy:
+        contents: “Hello Ansible world!”
+        dest: /root/hello
+        perms: 0444
+        owner: root
