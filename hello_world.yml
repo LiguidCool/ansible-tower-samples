@@ -1,5 +1,8 @@
 - name: Hello World Sample
   hosts: all
   tasks:
-    - name: Installs Midnight Commander
-      yum: pkg=mc
+    - name: Installs Envirement Packages
+      yum: pkg={{ item }}
+      with_items:
+        - mc
+        - htop
