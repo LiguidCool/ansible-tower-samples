@@ -4,7 +4,7 @@
     - name: Hello Message
       copy:
         contents: “Hello Ansible world!”
-        dest: ~/test
+        dest: /root/hello
         perms: 0444
         owner: root
 
