@@ -1,11 +1,7 @@
+
 - name: Hello World Sample
   hosts: all
   tasks:
-    - name: Extra Packages for Enterprise Linux 7
-      yum: pkg=epel-release
-    - name: Installs Envirement Packages
-      yum: pkg={{ item }}
-      with_items:
-        - mc
-        - htop
-        - net-tools
+    - name: Hello Message
+      debug:
+        msg: "Hello World!"
