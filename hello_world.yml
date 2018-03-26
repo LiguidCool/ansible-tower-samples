@@ -4,4 +4,4 @@
   tasks:
     - name: Hello Message
       debug:
-        msg: "Hello World!\n {{ test | default(ansible_distribution_major_version) }}"
+        msg: "OS major version: {{ test | default(ansible_distribution_major_version) }}"
